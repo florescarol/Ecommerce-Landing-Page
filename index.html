@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pantanal.com.br </title>
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./imgs/logo.png" alt="Pantanal.com.br">
+    </header>
+    <div class="carrossel-container">
+        <div class="carrossel">
+            <div class="slide fade">
+                <div class='slide-inside-main'>
+                    <div class="box">
+                        <div class='title'>
+                            <p>BLACK</p>
+                            <p>FRIDAY</p>
+                        </div>
+                        <div id='date'>
+                            26 DE NOVEMBRO
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <p>Produtos com até</p>
+                            <div id="desconto">
+                                80% DE DESCONTO
+                            </div>
+                            <p>exclusivos para assinantes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-inside">
+                    <div class="box">
+                        <div class="title-product">
+                            <p>BLACK</p>
+                            <p>FRIDAY</p>
+                        </div>
+                    </div>
+                    <div class="box-img">
+                        <img id="notebook" src="./imgs/notebook.png" alt="notebook">
+                    </div>
+                    <div class="box-description">
+                        <div class="product">
+                            <p>Notebook Gamer</p>
+                        </div>
+                        <div class="product-description">
+                            <p>Intel Core I5 8GB 1TB HD 128GB SSD GTX 1650 </p>
+                        </div>
+                        <div class="price">
+                            <p>De <span class="original"> R$7.999,99 </span></p>
+                            <p>para <b>R$ 5.999,99</b></p>
+                            <p>(em parcelas de até 16x)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-inside">
+                    <div class="box">
+                        <div class="title-product">
+                            <p>BLACK</p>
+                            <p>FRIDAY</p>
+                        </div>
+                    </div>
+                    <div class="box-img">
+                        <img src="./imgs/tv.png" alt="televisão">
+                    </div>
+                    <div class="box-description">
+                        <div class="product">
+                            <p>Televisão Smart 4k</p>
+                        </div>
+                        <div class="product-description">
+                            <p>Processador Crystal UHD, Assistente pessoal</p>
+                        </div>
+                        <div class="price">
+                            <p>De <span class="original"> R$13.999,99 </span></p>
+                            <p>para <b>R$10.999,99</b></p>
+                            <p>(em parcelas de até 24x)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-inside">
+                    <div class="box">
+                        <div class="title-product">
+                            <p>BLACK</p>
+                            <p>FRIDAY</p>
+                        </div>
+                    </div>
+                    <div class="box-img">
+                        <img src="./imgs/iphone.png" alt="iphone">
+                    </div>
+                    <div class="box-description">
+                        <div class="product">
+                            <p>Iphone 12 Pro Max</p>
+                        </div>
+                        <div class="product-description">
+                            <p>Azul Pacífico, 256GB </p>
+                        </div>
+                        <div class="price">
+                            <p>De <span class="original"> R$11.999,99 </span></p>
+                            <p>para <b>R$ 9.999,99</b></p>
+                            <p>(em parcelas de até 24x)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-inside">
+                    <div class="box">
+                        <div class="title-product">
+                            <p>BLACK</p>
+                            <p>FRIDAY</p>
+                        </div>
+                    </div>
+                    <div class="box-img">
+                        <img src="./imgs/camera.png" alt="camera">
+                    </div>
+                    <div class="box-description">
+                        <div class="product">
+                            <p>Câmera Profissional</p>
+                        </div>
+                        <div class="product-description">
+                            <p>Acompanha lente 18-55mm f/3.5-5.6</p>
+                        </div>
+                        <div class="price">
+                            <p>De <span class="original"> R$2.999,99 </span></p>
+                            <p>para <b>R$ 2.499,99</b></p>
+                            <p>(em parcelas de até 12x)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="btn-esquerda" onclick="mudarSlide(-1)"> < </button>
+    <button id="btn-direita" onclick="mudarSlide(1)"> > </button>
+    
+    <div class="container">
+        <div class="section">
+            <p>NÃO PERCA TEMPO!</p>
+            <p style="font-size: 20px;">Milhares de ofertas exclusivas estão te esperando.</p>
+            <div id="countdown">
+                <ul>
+                    <li><span id="dias"></span> dias</li>
+                    <li><span id="horas"></span> horas</li>
+                    <li><span id="minutos"></span> minutos</li>
+                    <li><span id="segundos"></span> segundos</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <img src="./imgs/loading.gif" alt="loading gif" id="loading">
+            <div id="mensagem"></div>
+            <button type="button" class="btn-reiniciar" id="btn-reiniciar" onclick="reiniciar()">Tentar novamente.</button>
+            <button type="button" class="btn-reiniciar" id="btn-novamente" onclick="reiniciar()">Adicione outro email.</button>
+
+
+            <p id="form">Cadastre-se e garanta seus descontos:</p>
+            <input placeholder="Nome" id="nome">
+            <input placeholder="Email" id="email">
+            <div id="termos">
+                <input type="checkbox" id="checkbox">
+                <p>Aceito receber ofertas e outros avisos por email.</p>
+            </div>
+            <button type="button" id="btn-enviar" onclick="check()">Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="desenvolvedora">Desenvolvido por Carolina Flores para Hiring Coders.</p>
+        <div>
+            <p>Conecte-se comigo:</p>
+            <div id="connect">
+                <a href="https://www.linkedin.com/in/carolinaflores21/" target="_blank"><img src="./imgs/linkedin.png" alt="linkedin"></a>
+                <a href="https://github.com/florescarol" target="_blank"><img src="./imgs/github.png" alt="github"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

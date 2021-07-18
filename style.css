@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-color:rgb(35, 31, 33);
+}
+
+header {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+header img {
+    width: 20%;
+}
+
+.carrossel-container {
+    margin: 0rem 4rem;
+    position: relative;
+}
+
+.carrossel {
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+.slide {
+    width: 100%;
+    border: solid black 2px;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: .7s;
+    animation-name: fade;
+    animation-duration: .7s;
+}
+  
+@-webkit-keyframes fade {
+    from {
+        margin-top: 10px;
+        width: 100%;
+        opacity: .8;
+      }
+    
+      to {
+        margin-top: 0;
+        width: 100%;
+        opacity: 1;
+      }
+}
+  
+@keyframes fade {
+    from {
+        margin-top: 10px;
+        width: 100%;
+        opacity: .8;
+      }
+    
+      to {
+        margin-top: 0;
+        width: 100%;
+        opacity: 1;
+      }
+}
+
+.slide-inside-main {
+    display: flex;
+    flex-direction: row;
+    height: 296px;
+    background-color: rgb(249, 165, 27);
+    background: linear-gradient(to bottom, rgb(202, 15, 40), rgb(249, 165, 27))
+}
+
+.slide-inside {
+    display: flex;
+    flex-direction: row;
+    height: 296px;
+    background-color: rgb(249, 165, 27);
+    background: linear-gradient(to bottom, rgb(202, 15, 40), rgb(249, 165, 27))
+}
+
+.box {
+    width: 50%;
+    text-align: center;
+    align-self: center;
+}
+
+.title {
+    display: inline-block;
+    font-size: 76px;
+    font-weight: bold;
+    border-bottom: solid 3px;
+    border-top: solid 3px;
+}
+
+#date {
+    display: block;
+    font-size: 40px;
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.title-product {
+    display: inline-block;
+    font-size: 76px;
+    font-weight: bold;
+    border-bottom: solid 3px;
+    border-top: solid 3px;
+    margin: auto;
+}
+
+.text {
+    font-size: 30px;
+    height: 80%;
+    font-weight: 600;
+}
+
+.text p {
+    padding: 1rem;
+}
+
+#desconto {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.box-img {
+    width: 50%;
+    display: flex;
+}
+
+.box-img img {
+    height: 296px;
+    margin: auto;
+}
+
+.box-description {
+    width: 50%;
+    text-align: center;
+    align-self: center;
+}
+
+.product {
+    font-size: 40px;
+    padding-bottom: 30px;
+    font-weight: 540;
+}
+
+.product-description, .price {
+    font-size: 24px;
+    padding-bottom: 18px;
+}
+
+.original {
+    text-decoration: line-through;
+}
+
+#notebook {
+    padding: 15px 0px;
+}
+
+
+#btn-esquerda, #btn-direita {
+    background-color: rgb(35, 31, 33);
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 245px;
+    width: auto;
+    margin-top: -30px;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+    border-radius: 10px;
+}
+
+#btn-direita {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+}
+
+#btn-direita:hover, #btn-esquerda:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+#btn-esquerda {
+    margin-left: 1rem;
+}
+
+.container {
+    margin: 1rem 4rem;
+    display: flex;
+    background-color: rgb(249, 165, 27);
+    font-size: 20px;
+    padding: 1rem;
+    justify-content: space-around;
+    border: solid black 2px;
+}
+
+.section {
+    width: 50%;
+    background-color: rgb(249, 165, 27);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section p {
+    background-color: rgb(249, 165, 27);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#countdown {
+    padding: 5px;
+    font-size: 34px;
+    padding-top: 30px;
+    font-weight: 900;
+    padding-bottom: 14px;
+}
+
+#countdown ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#countdown ul li {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+
+#countdown ul li span {
+    font-size: 36px;
+    display: block;
+}
+
+#loading {
+    display: none;
+    height: 168px;
+    margin: auto;
+}
+
+#mensagem {
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    display: none;
+}
+
+.btn-reiniciar {
+    display: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    padding: 4px;
+    border: solid black 2px;
+    margin: 10px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.btn-reiniciar:hover {
+    background-color: black;
+    color: white;
+}
+
+#form {
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+#email, #nome {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px;
+    border: solid black 2px;
+    width: 100%;
+    background-color: white;
+    margin: 4px 10px;
+}
+
+#email:focus, #nome:focus {
+    outline: 0;
+}
+
+#checkbox {
+    width: 40px;
+    transform: scale(1.5);
+}
+
+#termos {
+    background-color: rgb(249, 165, 27);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#termos p {
+    font-size: 16px;
+    text-align: left;
+}
+
+#btn-enviar {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    padding: 4px;
+    border: solid black 2px;
+    margin: 10px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+#btn-enviar:hover {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: rgb(249, 165, 27);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    bottom: 0;
+    position: relative;
+    width:100%;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+footer div p {
+    padding-left: 10px;
+}
+
+footer img {
+    width: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    padding-bottom: 1px;
+}
+
+@media (max-width:1024px) {
+    #countdown ul li span {
+        font-size: 30px;
+    }
+
+    #countdown ul li {
+        font-size: 18px;
+    }
+
+    .box-img img {
+        height: 200px;
+    }
+
+    .product {
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width:768px) {
+    .title {
+        font-size: 54px;
+    }
+
+    #date {
+        font-size: 30px;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    #desconto {
+        font-size: 30px;
+        margin: 10px;
+        padding: 5px 15px;
+    }
+
+    .title-product {
+        font-size: 54px;
+    }
+
+    .box-img img {
+        height: 150px;
+    }
+
+    .product {
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+
+    .product-description, .price {
+        font-size: 20px;
+    }
+
+    #countdown {
+        padding: 0px;
+    }
+
+    #countdown ul li {
+        padding: 5px 20px;
+    }
+
+    #termos p {
+        padding-left: 3px;
+    }
+}
+
+@media (max-width: 425px) {
+    header img {
+        width: 30%;
+    }
+
+    .slide-inside-main {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    #date {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .text p {
+        padding: 10px;
+    }
+
+    #desconto {
+        font-size: 24px;
+    }
+
+    .title-product {
+        display: none;
+    }
+
+    .slide-inside, .container {
+        flex-direction: column;
+    }
+
+    .box-img {
+        align-self: center;
+        width: 100%;
+    }
+
+    .box-img img {
+        height: 120px;
+    }
+
+    .box-description {
+        width: 100%;
+    }
+
+    .product {
+        font-size: 22px;
+    }
+
+    .product-description, .price {
+        font-size: 18px;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    #countdown {
+        padding: 5px;
+    }
+
+    #countdown ul li {
+        padding: 5px 10px;
+    }
+
+    #form {
+        padding-left: 0px;
+        font-size: 18px;
+    }
+
+    #termos p {
+        padding-left: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    #desenvolvedora {
+        width: 50%;
+    }
+
+    #connect {
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    #countdown ul li span {
+        font-size: 26px;
+    }
+
+    #countdown ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 395px) {
+    .text {
+        font-size: 18px;
+    }
+
+    .text p {
+        padding: 2px;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 36px;
+    }
+
+    #date {
+        font-size: 20px;
+        padding-bottom: 2px;
+    }
+
+    #desconto {
+        margin: 5px;
+    }
+
+    #btn-esquerda, #btn-direita {
+        top: 180px;
+    }
+
+    .container p {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
+    #countdown ul li span {
+        font-size: 24px;
+    }
+
+    #countdown ul li {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    #desenvolvedora {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 352px) {
+    #countdown ul li {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 332px) {
+    #countdown ul li {
+        padding: 3px 0px;
+    }
+}
+
+@media (max-width: 320px) {
+    #countdown ul li span {
+        font-size: 20px;
+    }
+    
+    #countdown ul li {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    footer {
+        font-size: 8px;
+    }
+
+    .product {
+        font-size: 20px;
+    }
+
+    .product-description, .price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 310px) {
+    .text {
+        font-size: 16px;
+    }
+
+    #desconto {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 309px) {
+    #countdown ul li {
+        padding: 3px;
+    }
+}
